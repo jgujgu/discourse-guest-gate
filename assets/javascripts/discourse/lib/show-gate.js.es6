@@ -11,7 +11,7 @@ export default function(name, opts) {
 
   const controllerName = opts.admin ? `modals/${name}` : name;
 
-  const viewClass = container.lookupFactory('view:' + name);
+  const viewClass = container.factoryFor('view:' + name);
   const controller = container.lookup('controller:' + controllerName);
   if (viewClass) {
     route.render(name, { into: 'modal', outlet: 'modalBody' });

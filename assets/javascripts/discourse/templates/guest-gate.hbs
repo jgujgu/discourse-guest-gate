@@ -43,9 +43,6 @@
     </div>
   {{/if}}
   <style type="text/css">
-    .modal-middle-container {
-      margin-top: 10%;
-    }
     .gate .modal-header {
       border-bottom: none;
     }
@@ -55,9 +52,6 @@
       {{else}}
       margin-top: 15px;
       {{/if}}
-    }
-    .gate .modal-header h3 {
-      display: none;
     }
     .modal .modal-body p {
       font-size: 14px;
@@ -81,7 +75,7 @@
       color: #787878;
     }
   </style>
-  {{login-buttons action="externalLogin"}}
+  {{login-buttons externalLogin=(action "externalLogin")}}
 {{/d-modal-body}}
 <div class="modal-footer">
   {{#if ssoEnabled}}
